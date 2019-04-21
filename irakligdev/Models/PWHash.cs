@@ -12,7 +12,7 @@ namespace irakligdev.Models
 {
     public class PWHash
     {
-        public static bool ComparePassHash(String username, String password)
+        public static bool ComparePassHash(string username, string password)
         {
             using(var context = new UserContext())
             {
@@ -56,7 +56,7 @@ namespace irakligdev.Models
             
         }
 
-        public static void NewUserHash(String username, String password)
+        public static bool NewUserHash(string username, string password)
         {
             using (var context = new UserContext())
             {
@@ -83,21 +83,25 @@ namespace irakligdev.Models
 
                             context.User.Add(newUser);
                             context.SaveChanges();
+                            return true;
 
                         }
                         catch (IOException e)
                         {
                             Console.WriteLine($"I/O Exception: {e.Message}");
+                            return false;
                         }
                         catch (UnauthorizedAccessException e)
                         {
                             Console.WriteLine($"Access Exception: {e.Message}");
+                            return false;
                         }
                     }
                 }
                 else
                 {
                     Console.WriteLine("User already exists.");
+                    return false;
                 }
             }
         }

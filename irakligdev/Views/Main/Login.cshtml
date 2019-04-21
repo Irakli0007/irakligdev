@@ -9,13 +9,13 @@
 </div>
 
 <div>
-    @using (Html.BeginForm("Login", "Main", FormMethod.Post))
+    @using (Html.BeginForm("Login", "Main"))
     {
         @Html.TextBoxFor(model => model.Username)
         @Html.ValidationMessageFor(model => model.Username)
 
-        @Html.TextBoxFor(model => model.Password)
-        @Html.ValidationMessageFor(model => model.Password)
+        @Html.TextBoxFor(model => model.SPassword)
+        @Html.ValidationMessageFor(model => model.SPassword)
 
         <button type="submit">Login</button>
 

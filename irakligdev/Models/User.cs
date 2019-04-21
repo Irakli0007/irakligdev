@@ -8,17 +8,17 @@ using System.Web;
 namespace irakligdev.Models
 {
     [Table("User")]
-    public class User
+    public partial class User
     {
         [Key]
         public int UserId { get; set; }
 
         [Required]
         public string Username { get; set; }
-        public string Password { get; set; }
+        public byte[] Password { get; set; }
 
 
-        public bool IsActive { get; set; }
+        public string SPassword;
 
 
         

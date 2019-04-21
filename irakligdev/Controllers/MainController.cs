@@ -62,23 +62,26 @@ namespace irakligdev.Controllers
             return View("Start");
         }
 
+       
         public ActionResult Register(User user)
         {
             if(ModelState.IsValid)
             {
-                //RegisterUser(user);
-                //call gordon's code to register a user
+                bool Registered = PWHash.NewUserHash(user.Username, user.SPassword);
+                               
+                //if success return with success view?
             }
 
             return View();
         }
 
+        
         public ActionResult Login(User user)
         {
             if (ModelState.IsValid)
             {
-                //LoginUser(user);
-                //call gordon's code to login a user
+                bool LoggedIn = PWHash.ComparePassHash(user.Username, user.SPassword);
+                //if success return with success view?
             }
 
             return View();
