@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Growth Simulator</h1>
+</div>
+
+<div class="row">
+    <h2>Largest Growth Contributions</h2>
+    <div class="col-md-4">
+        <h2>@ViewBag.FirstPlace</h2>
+        <h3>@ViewBag.FirstPlaceScore</h3>
+    </div>
+    <div class="col-md-4">
+        <h2>@ViewBag.SecondPlace</h2>
+        <h3>@ViewBag.SecondPlaceScore</h3>
+    </div>
+    <div class="col-md-4">
+        <h2>@ViewBag.ThirdPlace</h2>
+        <h3>@ViewBag.ThirdPlaceScore</h3>
+    </div>
+</div>
