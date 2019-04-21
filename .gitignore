@@ -3,10 +3,3 @@
 ################################################################################
 
 /.vs
-/irakligdev/bin
-/irakligdev/App_Data
-/irakligdev/obj/Debug
-/packages
-/.gitignore.gitignore
-/.gitattributes.gitattributes
-/irakligdev/irakligdev.csproj.user
