@@ -5,7 +5,7 @@ namespace irakligdev.ScoreContextMigrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class ScoreConfiguration : DbMigrationsConfiguration<irakligdev.DBEntities.ScoreContext>
+    internal sealed class ScoreConfiguration : DbMigrationsConfiguration<irakligdev.Models.ScoreContext>
     {
         public ScoreConfiguration()
         {
@@ -14,7 +14,7 @@ namespace irakligdev.ScoreContextMigrations
             ContextKey = "irakligdev.DBEntities.ScoreContext";
         }
 
-        protected override void Seed(irakligdev.DBEntities.ScoreContext context)
+        protected override void Seed(irakligdev.Models.ScoreContext context)
         {
             //  This method will be called after migrating to the latest version.
 

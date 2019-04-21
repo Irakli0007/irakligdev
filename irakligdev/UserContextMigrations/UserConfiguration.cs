@@ -5,7 +5,7 @@ namespace irakligdev.UserContextMigrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class UserConfiguration : DbMigrationsConfiguration<irakligdev.DBEntities.UserContext>
+    internal sealed class UserConfiguration : DbMigrationsConfiguration<irakligdev.Models.UserContext>
     {
         public UserConfiguration()
         {
@@ -13,7 +13,7 @@ namespace irakligdev.UserContextMigrations
             MigrationsDirectory = @"UserContextMigrations";
         }
 
-        protected override void Seed(irakligdev.DBEntities.UserContext context)
+        protected override void Seed(irakligdev.Models.UserContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using irakligdev.DBEntities;
+using irakligdev.Models;
 
 namespace irakligdev.Controllers
 {

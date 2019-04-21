@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace irakligdev.DBEntities
+namespace irakligdev.Models
 {
     [Table("Score")]
     public class Score
