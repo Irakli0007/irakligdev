@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using irakligdev.DBEntities;
+using irakligdev.Models;
 
 namespace irakligdev.Controllers
 {
@@ -12,20 +12,7 @@ namespace irakligdev.Controllers
     {
         public ActionResult Index()
         {
-            using (var context = new ScoreContext())
-            {
-                try
-                {
-      //              Score first = (from Value in context.Score orderby Value descending).Distinct().First();
-                    
-                }
-                catch (InvalidOperationException e)
-                {
-                }
-     //           ViewBag.Message = s.Value;
-
-                return View();
-            }
+            
 
             return View();
         }
@@ -75,9 +62,24 @@ namespace irakligdev.Controllers
             return View("Start");
         }
 
-        public ActionResult Register()
+        public ActionResult Register(User user)
         {
+            if(ModelState.IsValid)
+            {
+                //RegisterUser(user);
+                //call gordon's code to register a user
+            }
 
+            return View();
+        }
+
+        public ActionResult Login(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                //LoginUser(user);
+                //call gordon's code to login a user
+            }
 
             return View();
         }

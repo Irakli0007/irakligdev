@@ -183,6 +183,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\Start.cshtml" />
+    <Content Include="Views\Main\Login.cshtml" />
+    <Content Include="Views\Main\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

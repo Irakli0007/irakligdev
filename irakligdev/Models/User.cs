@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace irakligdev.DBEntities
+namespace irakligdev.Models
 {
     [Table("User")]
     public class User
@@ -13,8 +13,11 @@ namespace irakligdev.DBEntities
         [Key]
         public int UserId { get; set; }
 
+        [Required]
         public string Username { get; set; }
         public string Password { get; set; }
+
+
         public bool IsActive { get; set; }
 
 

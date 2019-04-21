@@ -1,0 +1,23 @@
+﻿@model irakligdev.Models.User
+
+@{
+    ViewBag.Title = "Login Page";
+}
+
+<div class="login">
+    <h2>Login to your account.</h2>
+</div>
+
+<div>
+    @using (Html.BeginForm("Login", "Main", FormMethod.Post))
+    {
+        @Html.TextBoxFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+
+        @Html.TextBoxFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+
+        <button type="submit">Login</button>
+
+    }
+</div>
