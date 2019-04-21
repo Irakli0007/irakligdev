@@ -16,13 +16,13 @@ namespace irakligdev.Controllers
             {
                 try
                 {
-                    Score first = (from Value in context.Score orderby Value descending).Distinct().First();
+      //              Score first = (from Value in context.Score orderby Value descending).Distinct().First();
                     
                 }
                 catch (InvalidOperationException e)
                 {
                 }
-                ViewBag.Message = s.Value;
+     //           ViewBag.Message = s.Value;
 
                 return View();
             }
