@@ -12,12 +12,24 @@ namespace irakligdev.Controllers
     {
         public ActionResult Index()
         {
+            using (var context = new ScoreContext())
+            {
+                try
+                {
+                    Score first = (from Value in context.Score orderby Value descending).Distinct().First();
+                    
+                }
+                catch (InvalidOperationException e)
+                {
+                }
+                ViewBag.Message = s.Value;
+
+                return View();
+            }
+
             return View();
         }
         
-       
-
-
         public ActionResult Start()
         {
             using (var context = new ScoreContext())
@@ -33,6 +45,7 @@ namespace irakligdev.Controllers
                 {
                 }
                 ViewBag.Message = s.Value;
+                
                 return View();
             }
         }
@@ -64,6 +77,8 @@ namespace irakligdev.Controllers
 
         public ActionResult Register()
         {
+
+
             return View();
         }
 

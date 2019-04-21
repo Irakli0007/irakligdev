@@ -31,6 +31,8 @@ namespace CustomAuthenticationMVC.Controllers
             return View();
         }
 
+        /*
+
         [HttpPost]
         public ActionResult Login(LoginView loginView, string ReturnUrl = "")
         {
@@ -89,6 +91,8 @@ namespace CustomAuthenticationMVC.Controllers
 
             return View(registrationView);
         }
+
+    */
 
         public ActionResult ActivationAccount(string id)
         {
