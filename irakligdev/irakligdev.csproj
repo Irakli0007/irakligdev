@@ -129,15 +129,24 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\MainController.cs" />
-    <Compile Include="Models\PWHash.cs" />
-    <Compile Include="Models\Score.cs" />
-    <Compile Include="Models\ScoreContext.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserContext.cs" />
+    <Compile Include="Controllers\AddNewController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Migrations\201907240341078_initial_migration.cs" />
+    <Compile Include="Migrations\201907240341078_initial_migration.Designer.cs">
+      <DependentUpon>201907240341078_initial_migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Entities.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Phrases\Phrases_Relation.cs" />
+    <Compile Include="Models\Phrases\Phrases_KR.cs" />
+    <Compile Include="Models\Phrases\Phrases_EN.cs" />
+    <Compile Include="Models\Words\Words_Relation.cs" />
+    <Compile Include="Models\Words\Words_KR.cs" />
+    <Compile Include="Models\Words\Words_EN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +160,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -175,10 +185,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Main\Start.cshtml" />
-    <Content Include="Views\Main\Login.cshtml" />
-    <Content Include="Views\Main\Register.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
+    <Content Include="Views\AddNew\AddNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -195,6 +204,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907240341078_initial_migration.resx">
+      <DependentUpon>201907240341078_initial_migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

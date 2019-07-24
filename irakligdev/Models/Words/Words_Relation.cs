@@ -7,20 +7,17 @@ using System.Web;
 
 namespace irakligdev.Models
 {
-    [Table("User")]
-    public partial class User
+    [Table("Words_Relation")]
+    public class Words_Relation
     {
         [Key]
-        public int UserId { get; set; }
-
-        [Required]
-        public string Username { get; set; }
-        public byte[] Password { get; set; }
-
-
-        public string SPassword;
-
-
+        public Guid guid { get; set; }
         
+        public Guid Word_EN_Guid { get; set; }
+        public Guid Word_KR_Guid { get; set; }
+
+
+
+
     }
 }

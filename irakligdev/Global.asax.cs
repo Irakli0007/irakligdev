@@ -18,16 +18,8 @@ namespace irakligdev
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            //    DeleteScoreData();
 
         }
-        public void DeleteScoreData()
-        {
-            using (var context = new ScoreContext())
-            {
-                context.Score.RemoveRange(context.Score);
-                context.SaveChanges();
-            }
-        }
+
     }
 }
